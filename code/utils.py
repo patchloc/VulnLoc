@@ -1,9 +1,10 @@
 import pickle
 import string
 import numpy as np
+import multiprocessing
 
 # system setup
-ProcessNum=10
+ProcessNum=np.min((10, multiprocessing.cpu_count()))
 
 # Used for generating the random filename
 FileNameChars = list(string.letters + string.digits)
