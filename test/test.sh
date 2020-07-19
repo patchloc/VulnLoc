@@ -32,6 +32,6 @@ cve_out_folder=`find $out_folder/$target_cve -maxdepth 1 -name 'output_*' -not -
 echo "Output Folder: $cve_out_folder"
 # get the hash of the poc
 target_fuzz_path="$cve_out_folder/fuzz.log"
-sed '19q;d' $target_fuzz_path | awk '{print $NF}'
+poc_hash=`sed '19q;d' $target_fuzz_path | awk '{print $NF}'`
 
-python patchloc.py --config_file ./config.ini --tag $target_cve --func calc --out_folder $cve_out_folder --poc_trace_hash <poc_trace_hash> --process_num 10
+python patchloc.py --config_file ./config.ini --tag $target_cve --func calc --out_folder $cve_out_folder --poc_trace_hash $poc_hash --process_num 10
