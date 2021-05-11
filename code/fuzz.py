@@ -260,6 +260,11 @@ def check_exploit(err, crash_info):
 				if crash_info[2] in item:
 					return 'm'
 		return 'b'
+	elif crash_info[0] == "assert":
+		if crash_info[1] in err:
+			return "m"
+		else:
+			return "b"
 	else:
 		raise Exception('ERROR: Unknown crash info -> %s' % crash_info)
 

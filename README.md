@@ -171,5 +171,10 @@ $ python fuzz.py --config_file <path_to_config_file> --tag <cve_tag>
 $ python patchloc2.py --config_file <path_to_config_file> --tag <cve_tag> --func calc --out_folder <path_to_output_folder> --poc_trace_hash <poc_trace_hash> --process_num <process_num> 
 ```
 
+## More Examples
+More examples can be found at the folder **./test**. The **README.md** file in
+each subfolder under **./test** will tell you how to setup each CVE in our
+benchmark.
+
 
 
