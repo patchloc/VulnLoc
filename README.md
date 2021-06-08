@@ -1,12 +1,23 @@
+# VulnLoc
+
 ## Overview
 
-Automated program repair can significantly reduce the window of exposure after a vulnerability is disclosed. In this paper, we study the problem of patch localization to find a program point at which a patch can be synthesized for a previously detected vulnerability. Given a vulnerable binary and only one exploit input, our approach can ... (complete it later)
+
+Automatic vulnerability diagnosis can help security analysts identify and, therefore, quickly patch disclosed vulnerabilities. The vulnerability localization problem is to automatically find a program
+point at which the “root cause” of the bug can be fixed. This paper
+employs a statistical localization approach to analyze a given exploit.
+Our main technical contribution is a novel procedure to systematically construct a test-suite which enables high-fidelity localization.
+We build our techniques in a tool called VulnLoc (which is originally named with PatchLoc).
+VulnLoc automatically pinpoints vulnerability locations, given just one exploit, with
+high accuracy. It does not make any assumptions about the
+availability of source code, test suites, or specialized knowledge
+of the type of vulnerability.
 
 ## Installation
 
 1) Install dependencies
 
-PatchLoc requires all the dependencies of Dynamorio, numpy (>=1.16) and pyelftools.
+VulnLoc requires all the dependencies of Dynamorio, numpy (>=1.16) and pyelftools.
 ```console
 $ sudo apt install -y build-essential git vim unzip python-dev python-pip ipython wget libssl-dev g++-multilib doxygen transfig imagemagick ghostscript git zlib1g-dev  
 # install numpy
@@ -71,12 +82,12 @@ libcbr_path = "<path_to_dynamorio>/build/api/bin/libcbr.so"
 ```
 
 ## Usage
-To show the usage of PatchLoc, we take *cve-2016-5314* as an example. Here are the links to the PoC and the developer-generated patch:
+To show the usage of VulnLoc, we take *cve-2016-5314* as an example. Here are the links to the PoC and the developer-generated patch:
 - [PoC](http://bugzilla.maptools.org/show_bug.cgi?id=2554)
 - [Developer-generated patch](https://github.com/vadz/libtiff/commit/391e77fcd217e78b2c51342ac3ddb7100ecacdd2)
 
 1) (Optional) Compile the target vulnerable program  
-PatchLoc takes a vulnerable binary and the corresponding PoC as its input. If you do not have the vulnerable binary, please compile the program first.   
+VulnLoc takes a vulnerable binary and the corresponding PoC as its input. If you do not have the vulnerable binary, please compile the program first.   
 ```console
 $ sudo apt install -y zlib1g-dev
 $ cd cve_2016_5314
