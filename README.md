@@ -13,6 +13,8 @@ high accuracy. It does not make any assumptions about the
 availability of source code, test suites, or specialized knowledge
 of the type of vulnerability.
 
+More details about the project can be found at the [paper](https://www.comp.nus.edu.sg/~prateeks/papers/VulnLoc.pdf).
+
 ## Installation
 
 1) Install dependencies
