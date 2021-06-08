@@ -1,14 +1,13 @@
 ## Quick Tour
 
 ### Download Configs and Other Files
-Please download all the .zip files in the folder
-[PatchLoc-Configs](https://drive.google.com/drive/folders/1B5dKaMfqN_mJSaYIIkeScdvZb9P6_tQh?usp=sharing)
-to **./PatchLoc/test** in your localhost and unzip these files.
+Please download all the .zip files in the [folder](https://drive.google.com/drive/folders/1B5dKaMfqN_mJSaYIIkeScdvZb9P6_tQh?usp=sharing)
+to **./VulnLoc/test** in your localhost and unzip these files.
 
 ### Setup Docker Container
 
 ```bash
-cd ./PatchLoc/test/env_setup
+cd ./VulnLoc/test/env_setup
 # Build a docker image
 docker build -f vulnloc_env.Dockerfile -t vulnloc_env .
 # Run a docker container
@@ -29,7 +28,7 @@ mkdir <target_cve>
 
 ```bash
 # Run following commands in your localhost
-cd ./PatchLoc/test/scripts
+cd ./VulnLoc/test/scripts
 ./copy_files.sh <target_cve> <container_id>
 ```
 
