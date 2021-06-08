@@ -1,6 +1,10 @@
-## Overview
+# VulnLoc
 
-Automated program repair can significantly reduce the window of exposure after a vulnerability is disclosed. In this paper, we study the problem of patch localization to find a program point at which a patch can be synthesized for a previously detected vulnerability. Given a vulnerable binary and only one exploit input, our approach can ... (complete it later)
+## Overview
+Automatic vulnerability diagnosis can help security analysts identify and, therefore, quickly patch disclosed vulnerabilities. The vulnerability localization problem is to automatically find a program point at which the “root cause” of the bug can be fixed. This paper
+employs a statistical localization approach to analyze a given exploit. Our main technical contribution is a novel procedure to systematically construct a test-suite which enables high-fidelity localization. We build our techniques in a tool called VulnLoc which automatically pinpoints vulnerability locations, given just one exploit, with high accuracy. VulnLoc does not make any assumptions about the availability of source code, test suites, or specialized knowledge of the type of vulnerability.
+
+We originally name our tool as PatchLoc, but later change it to **VulnLoc**. More details about VulnLoc can be found at the [paper](https://www.comp.nus.edu.sg/~prateeks/papers/VulnLoc.pdf).
 
 ## Installation
 
