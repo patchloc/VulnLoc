@@ -181,7 +181,7 @@ $ python fuzz.py --config_file <path_to_config_file> --tag <cve_tag>
 
 4) Rank the location candidates 
 ```console
-$ python patchloc2.py --config_file <path_to_config_file> --tag <cve_tag> --func calc --out_folder <path_to_output_folder> --poc_trace_hash <poc_trace_hash> --process_num <process_num> 
+$ python patchloc.py --config_file <path_to_config_file> --tag <cve_tag> --func calc --out_folder <path_to_output_folder> --poc_trace_hash <poc_trace_hash> --process_num <process_num> 
 ```
 
 ## More Examples
